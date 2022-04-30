@@ -19,16 +19,16 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30 },
   { id: '9', name: 'Daniel Cane', age: 51 },
 ];
-let getUserAverageAge = (arr)=>{
-  let ageArr = arr.map(x=>x.age)
-  let sumAge = ageArr.reduce((a,b)=>a+b);
-  let avrAge = Math.round(sumAge/arr.length)
+let getUserAverageAge = (arr) => {
+  let ageArr = arr.map(x => x.age)
+  let sumAge = ageArr.reduce((a, b) => a + b);
+  let avrAge = Math.round(sumAge / arr.length)
   return avrAge
 }
 console.log(getUserAverageAge(users))
 
-let getUsersNames = arr =>{
-  let newArr = arr.map(x=>x.name)
+let getUsersNames = arr => {
+  let newArr = arr.map(x => x.name)
   return newArr
 }
 console.log(getUsersNames(users))

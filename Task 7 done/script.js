@@ -10,7 +10,7 @@ const audi = {
   year: 2005,
   color: 'white',
 };
-let showObjectKeys = obj=>{
+let showObjectKeys = obj => {
   let newArr = Object.keys(obj)
   return newArr
 }
