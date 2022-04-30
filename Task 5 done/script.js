@@ -19,14 +19,14 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30, hasDog: false },
   { id: '9', name: 'Daniel Cane', age: 51, hasDog: true },
 ];
-let filterDogOwers = (arr)=>{
-  let newArr = arr.filter(x => x.hasDog===true)
-  return(newArr)
+let filterDogOwers = (arr) => {
+  let newArr = arr.filter(x => x.hasDog === true)
+  return (newArr)
 }
 console.log(filterDogOwers(users))
 
-let filterAdults = (arr)=>{
-  let newArr = arr.filter(x=>x.age>=18)
-  return(newArr)
+let filterAdults = (arr) => {
+  let newArr = arr.filter(x => x.age >= 18)
+  return (newArr)
 }
 console.log(filterAdults(users))

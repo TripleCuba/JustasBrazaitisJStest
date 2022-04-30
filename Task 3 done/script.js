@@ -13,35 +13,37 @@ const ENDPOINT = 'https://api.github.com/users';
 let cards = document.createElement("div");
 cards.className = "cards"
 let onOff = false
-document.getElementById("btn").addEventListener("click", ()=>{
-    onOff =! onOff
+document.getElementById("btn").addEventListener("click", () => {
+    onOff = !onOff
     console.log(onOff)
-    if(onOff===true){
+    if (onOff === true) {
         document.getElementById("message").textContent = ""
         fetch(ENDPOINT)
-        .then(getResp => getResp.json())
-        .then(getData => {
-            console.log(getData)
-            getData.forEach(item => {
-                let card = document.createElement("div")
-                card.className = "card"
-                let img = document.createElement("img");
-                img.src = item.avatar_url;
-                let login = document.createElement("h3");
-                login.textContent = item.login;
-                card.append(img, login)
-                cards.append(card)
-            });
-            document.getElementById("output").append(cards)
-        })
-        .catch(error=>{
-            error
-            alert("error")
-        }
-            )}
-    else{
-document.getElementById("output").innerHTML=`<p id="message">Press "Show Users" button to see users</p>`}
-    
+            .then(getResp => getResp.json())
+            .then(getData => {
+                console.log(getData)
+                getData.forEach(item => {
+                    let card = document.createElement("div")
+                    card.className = "card"
+                    let img = document.createElement("img");
+                    img.src = item.avatar_url;
+                    let login = document.createElement("h3");
+                    login.textContent = item.login;
+                    card.append(img, login)
+                    cards.append(card)
+                });
+                document.getElementById("output").append(cards)
+            })
+            .catch(error => {
+                error
+                alert("error")
+            }
+            )
+    }
+    else {
+        document.getElementById("output").innerHTML = `<p id="message">Press "Show Users" button to see users</p>`
+    }
+
 })
 
 
